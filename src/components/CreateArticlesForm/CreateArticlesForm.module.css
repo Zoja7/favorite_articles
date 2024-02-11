@@ -1,31 +1,50 @@
 .userFormWrapper {
+  padding-top: 44px;
   max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .userFormLabelWrapper {
   display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  flex-direction: column;
-  justify-content: start;
   gap: 8px;
+  /* align-items: center; */
 }
-.userFormLabel {
+/* .userFormLabel {
   margin-bottom: 8px;
-}
+} */
 .userFormText,
 .userFormTextarea {
-  padding: 8px;
   width: 100%;
-
+  max-width: 588px;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  margin: 0;
+  padding: 12px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.userFormTextarea {
+  resize: none;
+  /* max-width: 600px; */
+}
+
 .userFormButton {
-  padding: 8px 16px;
+  /* text-align: center; */
+  max-width: 588px;
+  width: 100%;
+  margin-left: 10px;
+  padding: 12px 22px;
   background-color: #007bff;
   color: #fff;
   border: none;

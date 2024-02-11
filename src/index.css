@@ -22,8 +22,7 @@ h6,
 p {
   margin: 0;
 }
-ul
-{
+ul {
   margin: 0;
   padding: 0;
 }
@@ -31,19 +30,4 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.userFormText,
-.userFormTextarea{
-  /* Скидання всіх стилів на значення за замовчуванням */
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-  /* Інші властивості, які можуть бути застосовані за потреби */
 }

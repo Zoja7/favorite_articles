@@ -19,22 +19,9 @@ const CreateArticlesForm = () => {
 
   return (
     <form className={css.userFormWrapper} onSubmit={handleSubmit}>
-      {/* <div>
-        <label htmlFor="image">Image:</label>
-        <input
-          type="file"
-          id="image"
-          accept="image/*"
-          onChange={e => setImage(e.target.value)}
-          value={image}
-          required
-        />
-      </div> */}
       <div className={css.userFormLabelWrapper}>
         {' '}
-        <label className={css.userFormLabel} htmlFor="author">
-          Author
-        </label>
+        <label className={css.userFormLabel} htmlFor="author"></label>
         <input
           className={css.userFormText}
           type="text"
@@ -42,12 +29,11 @@ const CreateArticlesForm = () => {
           onChange={e => setAuthor(e.target.value)}
           value={author}
           required
+          placeholder="author"
         />
       </div>
       <div className={css.userFormLabelWrapper}>
-        <label className={css.userFormLabel} htmlFor="title">
-          title
-        </label>
+        <label className={css.userFormLabel} htmlFor="title"></label>
         <input
           className={css.userFormText}
           type="text"
@@ -55,21 +41,22 @@ const CreateArticlesForm = () => {
           onChange={e => setTitle(e.target.value)}
           value={title}
           required
+          placeholder="text"
         />
       </div>
       <div className={css.userFormLabelWrapper}>
         {' '}
-        <label className={css.userFormLabel} htmlFor="text">
-          Text
-        </label>
+        <label className={css.userFormLabel} htmlFor="text"></label>
         <textarea
           className={css.userFormTextarea}
           id="text"
           onChange={e => setText(e.target.value)}
           value={text}
           required
+          placeholder="text"
         />
       </div>
+
       <button className={css.userFormButton} type="submit">
         Add Article
       </button>
