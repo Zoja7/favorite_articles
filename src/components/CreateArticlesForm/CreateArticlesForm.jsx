@@ -1,11 +1,27 @@
 // import React, { useState } from 'react';
 import { useState } from 'react';
+import { nanoid } from 'nanoid';
 import css from './CreateArticlesForm.module.css';
+// import { addArticle } from 'redux/articles/articles.reducer';
+
+import { useDispatch } from 'react-redux';
+import { addArticle } from 'redux/articles/articles.reducer';
 
 const CreateArticlesForm = () => {
+  const dispatch = useDispatch();
+  // const articles = useSelector(state => state.CreateArticlesForm);
   const [author, setAuthor] = useState('');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
+
+  const handleAddArticle = data => {
+    const newArticle = {
+      id: nanoid(),
+      ...data,
+    };
+
+    dispatch(addArticle(newArticle));
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -26,6 +42,7 @@ const CreateArticlesForm = () => {
           className={css.userFormText}
           type="text"
           id="author"
+          name="author"
           onChange={e => setAuthor(e.target.value)}
           value={author}
           required
@@ -38,6 +55,7 @@ const CreateArticlesForm = () => {
           className={css.userFormText}
           type="text"
           id="title"
+          name="title"
           onChange={e => setTitle(e.target.value)}
           value={title}
           required
@@ -50,6 +68,7 @@ const CreateArticlesForm = () => {
         <textarea
           className={css.userFormTextarea}
           id="text"
+          name="article"
           onChange={e => setText(e.target.value)}
           value={text}
           required
