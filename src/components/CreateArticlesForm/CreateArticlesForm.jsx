@@ -2,10 +2,8 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import css from './CreateArticlesForm.module.css';
-// import { addArticle } from 'redux/articles/articles.reducer';
-
 import { useDispatch } from 'react-redux';
-import { addArticle } from 'redux/articles/articles.reducer';
+import { addArticle } from '../../redux/articles/articles.reducer';
 
 const CreateArticlesForm = () => {
   const dispatch = useDispatch();

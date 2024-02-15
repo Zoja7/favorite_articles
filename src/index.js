@@ -12,9 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename="/favorite_articles">
       <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <App />
-        </PersistGate>
+        <PersistGate persistor={persistor}></PersistGate>
+        <App />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
